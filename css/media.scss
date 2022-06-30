@@ -1,0 +1,239 @@
+//===========================================MEDIA=================================================
+
+@media (max-width: 1230px) {
+
+    // Header 
+    .header {
+        &:not(:last-child) {
+            padding-top: 7px;
+        }
+    }
+
+    //  Intro
+
+    //  SupTitle Intro
+    .intro__suptitle {
+        font-size: 52px;
+    }
+
+    .intro__title {
+        font-size: 120px;
+    }
+    
+}
+
+@media (max-width: 990px) { 
+
+    // Header 
+    .header {
+        &:not(:last-child) {
+            padding-top: 4px;
+        }
+    }
+
+    // Nav
+    .nav {
+
+        &-header__item {
+            &:not(:last-child) {
+                margin: 0px 13px 0px 0px;
+            }
+        }
+    }
+
+
+    //  Intro 
+
+    // SupTitle Intro
+    .intro__suptitle {
+        font-size: 32px;
+    }
+
+    .intro__title {
+        font-size: 80px;
+    }
+
+
+    // Services
+    .services {
+
+        &__item {
+            width: 50%;
+            padding-bottom: 0;
+        }
+
+        &__item_border {
+            border-bottom: 0;
+        }
+    }
+
+
+
+}
+
+@media (max-width: 770px) {
+
+    // Header 
+    .header {
+        &:not(:last-child) {
+            padding-top: 10px;
+        }
+    }
+
+    // Nav
+    .nav {
+        display: none;
+        width: 100%;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        background-color: #eb8b8d;
+
+        &.active {
+            display: block;
+        }
+        
+    }
+
+    // Link Nav
+    .item-nav__link {
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
+    }
+
+    // Burger Nav
+    .nav__burger {
+        display: block;
+    }
+
+    // Intro 
+
+    // SubTitle Intro
+    .intro {
+        min-height: 650px;
+    }
+
+    // Section
+
+    .section {
+        padding: 20px 0;
+    }
+
+
+    // Services 
+
+    .services {
+        justify-content: center;
+
+        &__item {
+            width: 100%;
+            max-width: 500px;
+            padding-left: 55px;
+            padding-right: 0;
+        }
+
+        &__icon {
+            left: 0;
+        }
+        
+    }
+
+
+    // Card Team
+
+    .card {
+        margin-top: 50px;
+        justify-content: center;
+
+        &__item {
+            width: 100%;
+            max-width: 410px;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+
+    // Footer
+
+    .footer {
+        padding-top: 35px;
+    }
+
+    .footer__body {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:column-reverse;
+
+        padding: 10px 15px 15px;
+
+
+
+    }
+
+    .subscribe {
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-end;
+        
+        &__input {
+            margin-bottom: 7px;
+        }
+        
+  
+    }
+    
+    
+   
+
+    .subscribe__input,
+    .subscribe__btn {
+        width: 100%;
+        
+
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    // Intro
+    
+    // SupTitle Intro
+    .intro__suptitle {
+        font-size: 22px;
+    }
+
+    .intro__title {
+        font-size: 40px;
+    }
+
+    // Section 
+
+    .section {
+
+        &__header {
+            margin-bottom: 50px;
+        }
+
+        &__suptitle {
+            font-size: 20px;
+        }
+
+        &__title {
+            font-size: 24px;
+
+            &::after {
+                margin: 20px auto;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,171 @@
+//================================================================Header====================================================================
+
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 50;
+    
+    &:not(:last-child) {
+        padding-top: 30px;
+    }
+}
+
+.header__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Logo
+.header__logo {
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+// Nav Header
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+
+    padding: 5px 0;
+
+    &-header__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-header__item {
+        &:not(:last-child) {
+            margin: 0px 25px 0px 0px;
+        }
+    }
+
+}
+
+// Link Nav
+.item-nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+
+    color: #fff;
+    text-decoration: none;
+
+    transition: color .1s linear;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+
+        background-color: #fce38a;
+        opacity: 0;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+
+        transition: opacity .1s linear;
+    }
+
+    &:hover {
+        color: #fce38a;
+    }
+
+    &:hover::after,
+    &.active::after {
+        opacity: 1;
+    }
+
+    &:active {
+        color: #fce38a;
+    }
+}
+
+// Burger Nav
+.nav__burger {
+    width: 30px;
+    padding: 10px 0;
+    display: none;
+
+    font-size: 0;
+    color: transparent;
+
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &__item {
+        display: block;
+        width: 100%;
+        height: 3px;
+
+        background-color: #fff;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+
+        transition: background .2s linear;
+     
+        &.active &__item {
+            background: none;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            width: 100%;
+            height: 3px;
+
+            background-color: #fff;
+
+            position: absolute;
+            left: 0;
+            z-index: 1;
+
+            transition: transform .2s linear;
+        }
+
+        &::before {
+            top: -8px;
+        }
+
+        &::after {
+            bottom: -8px;
+        }
+
+        &.active &__item::before {
+            transform-origin: left top;
+            transform: rotate(45deg) translate3d(0px, -2px, 0)
+        }
+
+        &.active &__item::after {
+            transform-origin: left bottom;
+            transform: rotate(-45deg) translate3d(0px, 3px, 0)
+        }
+    }
+
+}

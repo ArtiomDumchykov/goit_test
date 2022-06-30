@@ -1,0 +1,35 @@
+@import "reset.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+  
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+  
+    color: #333;
+    
+  }
+
+// page 
+
+.page {
+    overflow: hidden;
+}
+
+//   _container
+
+._container {
+
+    width: 100%;
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@import "header.scss";
+@import "main.scss";
+@import "footer.scss";
+@import "media.scss";
+
