@@ -83,8 +83,13 @@
         }
     }
 
+    
+    
+
     // Nav
     .nav {
+        
+        // display: block;
         display: none;
         width: 100%;
 
@@ -93,18 +98,40 @@
         left: 0;
 
         background-color: #eb8b8d;
+        z-index: 1000;
+
+        
+
+       
+        
 
         &.active {
             display: block;
+           
+
         }
+
         
     }
+    .nav-header__list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        
+    }
+
+   
 
     // Link Nav
     .item-nav__link {
         display: block;
         margin: 0;
-        padding: 8px 20px;
+        padding: 4px 10px;
+    }
+
+    .fas__item {
+        visibility: hidden;
     }
 
     // Burger Nav
