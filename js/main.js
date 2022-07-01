@@ -6,13 +6,20 @@
     const intro = document.querySelector(".intro");
     const header = document.querySelector(".header");
 
-    const actionEventListenerUtils = {
+    const fas_items = document.querySelectorAll(".fas__item").forEach(x => x.hidden = true)
+
+
+    // ActionCLassList
+    const ActionCLassList = {
         addAction: "add",
         deleteAction: "remove"
-      }
+    }
 
+    function activeToggle(...args) {
+        const [element, action, className] = args; 
 
-    const fas_items = document.querySelectorAll(".fas__item").forEach(x => x.hidden = true)
+        element.classList[action](className);
+    }
 
     // Smooth scroll to link
 
@@ -22,13 +29,12 @@
         x.addEventListener("click", (event) => {
             event.preventDefault();
 
-            const {addAction, deleteAction} = actionEventListenerUtils;
+            const linkHref = document.querySelector(x.getAttribute("href")).offsetTop
 
-            const linkHref = x.getAttribute("href");
-            console.log(linkHref);
-            document.querySelector(linkHref).scrollIntoView({
-                behavior: "smooth",
-                block: 'start',
+            // ScrollToBlock    
+            window.scrollTo({
+                top:  linkHref - (linkHref * 0.085),
+                behavior: "smooth"
             })
 
             activeToggle(burgerToggle, deleteAction, "active");
@@ -36,20 +42,13 @@
         })
     })
 
+
+
     // Toggle
-
-    
-
-    function activeToggle(...args) {
-        const [element, action, className] = args; 
-
-        element.classList[action](className);
-    }
-
 
     burgerToggle.addEventListener("click", (event) => {
         event.preventDefault()
-        const {addAction, deleteAction} = actionEventListenerUtils
+        const {addAction, deleteAction} = ActionCLassList
 
 
         !burgerToggle.classList.contains('active') ?
@@ -65,9 +64,9 @@
     // FixedHeader
 
     function fixedHeader() {
-        const {addAction, deleteAction} = actionEventListenerUtils;
+        const {addAction, deleteAction} = ActionCLassList;
 
-        if (window.scrollY >= intro.offsetHeight * 0.915) {
+        if (window.scrollY >= intro.offsetHeight * 0.911) {
             activeToggle(header, addAction, "header__fixed")
         } else {
             activeToggle(header, deleteAction, "header__fixed")

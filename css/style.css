@@ -287,7 +287,7 @@ body {
 }
 
 .section {
-  padding: 40px 0;
+  padding: 10px 0;
 }
 
 .section__header {
@@ -332,11 +332,15 @@ body {
       flex-wrap: wrap;
 }
 
+.services__container {
+  padding-top: 20px;
+}
+
 .services__item {
   width: 33.33333%;
   padding: 0 35px 40px 85px;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .services__item_border {
