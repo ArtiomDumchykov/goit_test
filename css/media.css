@@ -17,6 +17,9 @@
   .nav-header__item:not(:last-child) {
     margin: 0px 13px 0px 0px;
   }
+  .intro {
+    min-height: 600px;
+  }
   .intro__suptitle {
     font-size: 32px;
   }
@@ -56,7 +59,7 @@
     display: block;
   }
   .intro {
-    min-height: 650px;
+    min-height: 570px;
   }
   .section {
     padding: 20px 0;
@@ -123,7 +126,16 @@
   }
 }
 
+@media (max-width: 670px) {
+  .intro {
+    min-height: 550px;
+  }
+}
+
 @media (max-width: 575px) {
+  .intro {
+    min-height: 375px;
+  }
   .intro__suptitle {
     font-size: 22px;
   }

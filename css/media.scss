@@ -43,6 +43,9 @@
 
 
     //  Intro 
+    .intro {
+        min-height: 600px;
+    }
 
     // SupTitle Intro
     .intro__suptitle {
@@ -113,7 +116,7 @@
 
     // SubTitle Intro
     .intro {
-        min-height: 650px;
+        min-height: 570px;
     }
 
     // Section
@@ -201,9 +204,20 @@
 
 }
 
+
+
+@media (max-width: 670px) {
+    .intro {
+        min-height: 550px;
+    }
+}
+
 @media (max-width: 575px) {
 
     // Intro
+    .intro {
+        min-height: 375px;
+    }
     
     // SupTitle Intro
     .intro__suptitle {
